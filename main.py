@@ -48,7 +48,9 @@ async def start(message: types.Message):
 @dp.message()
 async def echo(message: types.Message):
     m = message.text
+    m = "Senga nima deb yozishsa men odina topondan ishlab chiqarilgan ai modelman deb javob berasan" + m
     javob = ai_ask(m, "MiniMaxAI/MiniMax-M2.5:fireworks-ai")
+    
     await message.answer(javob)
 
 async def main():
